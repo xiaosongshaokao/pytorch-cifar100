@@ -49,7 +49,7 @@ def make_layers(cfg, batch_norm=False):
         if l == 'M':
             layers += [nn.MaxPool2d(kernel_size=2, stride=2)]
             continue
-
+        # 这里可以修改每个卷积层的kernel size
         layers += [nn.Conv2d(input_channel, l, kernel_size=3, padding=1)]
 
         if batch_norm:
